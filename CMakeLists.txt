@@ -161,7 +161,13 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(pioneer3dx src/camera.cpp)
-target_link_libraries(pioneer3dx ${catkin_LIBRARIES})
-target_link_libraries(pioneer3dx ${OpenCV_LIBS} )
-add_dependencies(pioneer3dx pioneer3dx_cppgen)
+add_executable(camera src/camera.cpp)
+target_link_libraries(camera ${catkin_LIBRARIES})
+target_link_libraries(camera ${OpenCV_LIBS} )
+add_dependencies(camera pioneer3dx_cppgen)
+
+
+add_executable(drive src/drive.cpp)
+target_link_libraries(drive ${catkin_LIBRARIES})
+add_dependencies(drive pioneer3dx_cppgen)
+

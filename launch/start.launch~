@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="pioneer3dx" name="driver" type="driver"/>
+	<node pkg="pioneer3dx" name="camera" type="camera"/>
+</launch>
